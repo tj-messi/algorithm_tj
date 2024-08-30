@@ -7,7 +7,18 @@ using namespace std;
 
 void solve()
 {
-	
+	int l,r;
+	cin>>l>>r;
+	int ans=0;
+	for(int i=l;i<=r-2;i++)
+	{
+		if(i%2==1)
+		{
+			ans++;
+			i+=3;
+		}
+	}
+	cout<<ans<<endl; 
 }
 
 signed main()
