@@ -7,7 +7,17 @@ using namespace std;
 
 void solve()
 {
-	
+	int n;
+	cin>>n;
+	int x,y;
+	cin>>x>>y;
+	int u=min(x,y);
+	if(n%u==0)
+	{
+		cout<<n/u<<endl;
+	}
+	else
+		cout<<n/u+1<<endl;
 }
 
 signed main()
