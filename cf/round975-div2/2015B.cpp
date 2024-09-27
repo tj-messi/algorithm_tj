@@ -4,10 +4,34 @@ using namespace std;
 #define ull unsigned long long
 #define endl '\n' 
 
-
 void solve()
 {
-	
+	int n,q;cin>>n>>q;
+	vector<int>arr(n);
+	map<int, int>m;
+		for (int i = 0; i < n; ++i)
+		{
+			cin >> arr[i];
+		}
+		
+		for (int i = 1; i < n; ++i)
+		{
+			m[i * (n - i)] += arr[i] - arr[i - 1] - 1;
+		}
+
+		for (int i = 0; i < n; ++i)
+		{
+			int op = n - i - 1;
+			int C = (i) * (op)+n - 1;
+			m[C] += 1;
+		}
+		for (int i = 0; i < q; ++i)
+		{
+			int x;
+			cin >> x;
+			cout << m[x] << " ";
+		}
+		cout << endl;
 }
 
 signed main()
