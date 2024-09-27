@@ -4,10 +4,24 @@ using namespace std;
 #define ull unsigned long long
 #define endl '\n' 
 
-
+const int N = 105;
+int a[N]; 
 void solve()
 {
-	
+	int n;cin>>n;
+	int sum1=0;
+	int sum2=0;
+	for(int i=1;i<=n;i++)cin>>a[i];
+	for(int i=1;i<=n;i++)
+	{
+		if(i%2==0)
+		{
+			sum1=max(sum1,a[i]);
+		}
+		else
+			sum2=max(sum2,a[i]);
+	}
+	cout<<max(sum1+n/2,sum2+n/2+(n%2==0 ? 0 : 1))<<endl;
 }
 
 signed main()
