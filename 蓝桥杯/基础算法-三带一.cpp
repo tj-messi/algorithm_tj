@@ -4,8 +4,6 @@ using namespace std;
 #define endl '\n'
 
 
-
-
 void solve()
 {
 	map<char,int> mp;
